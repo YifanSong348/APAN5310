@@ -10,4 +10,5 @@ https://docs.google.com/document/d/1bk5n_oAxXBOrYf0iG55lHuU6iAkn6AB6tdyXrjAGh7Y/
 Presentation Slides:
 https://docs.google.com/presentation/d/1aN0XQPfSwkERXsp7wt5YToy5Ylg3SG4G-yD0mOtFYvA/edit?usp=sharing
 
-Lucid Chart link for ERD:
+Lucid Chart link for ERD: 
+https://lucid.app/lucidchart/67148db2-3789-45fe-9495-9df19fa92a5c/edit?viewport_loc=1171%2C-1273%2C2409%2C1297%2C0_0&invitationId=inv_ee258c86-1ba2-41f2-8bf6-f5812dd89427

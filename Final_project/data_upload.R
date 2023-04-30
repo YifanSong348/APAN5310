@@ -1,8 +1,8 @@
-setwd("c:/Users/yifan/Documents/postgres/APAN5310/Final Project/resqlgroup14discussion/data/data/")
+setwd("c:/Users/yifan/Documents/postgres/APAN5310/Final Project/data-2/data/")
 #transform csv to df
 category_df=read.csv('category.csv',stringsAsFactors = T)
-coupon_df=read.csv('coupon.csv',stringsAsFactors = T)
 customer_df=read.csv('customer.csv',stringsAsFactors = T)
+coupon_df=read.csv('coupon.csv',stringsAsFactors = T)
 employee_df=read.csv('employee.csv',stringsAsFactors = T)
 expense_df=read.csv('expense.csv',stringsAsFactors = T)
 inventory_df=read.csv('inventory.csv',stringsAsFactors = T)
@@ -27,7 +27,7 @@ require('RPostgreSQL')
 
 con <- DBI::dbConnect(
   RPostgres::Postgres(),
-  dbname = 'APAN5310_FinalProject',
+  dbname = 'APAN5310_Final',
   host = '192.168.99.102',
   port = 5432,
   user = 'postgres',
@@ -40,8 +40,8 @@ dbWriteTable(con, name="category", value=category_df, row.names=FALSE, append=TR
 dbWriteTable(con, name="store", value=store_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="employee", value=employee_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="expense", value=expense_df, row.names=FALSE, append=TRUE)
-dbWriteTable(con, name="coupon", value=coupon_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="customer", value=customer_df, row.names=FALSE, append=TRUE)
+dbWriteTable(con, name="coupon", value=coupon_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="loyalty_program", value=loyalty_program_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="supplier", value=supplier_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="product", value=product_df, row.names=FALSE, append=TRUE)
@@ -51,8 +51,3 @@ dbWriteTable(con, name="salary", value=salary_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="sale", value=sale_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="loyalty_reward", value=loyalty_reward_df, row.names=FALSE, append=TRUE)
 dbWriteTable(con, name="transaction", value=transaction_df, row.names=FALSE, append=TRUE)
-
-
-
-
-

@@ -75,13 +75,12 @@ FROM (SELECT COUNT(sale_id) AS sale_num, SUM(sale_price) AS sale_amount
  * amount as a percentage of inventory)?
  *
  */
- 
-SELECT p.product_name, (SUM(s.sale_quantity) / SUM(i.inventory_quantity)) * 100 AS percentage_sold
+
+SELECT p.product_name, (SUM(s.sale_quantity) / i.inventory_quantity) * 100 AS percentage_sold
 FROM product p JOIN inventory i ON p.product_id = i.product_id
     JOIN sale s ON p.product_id = s.product_id AND i.store_id = s.store_id
-GROUP BY p.product_id
-HAVING SUM(i.inventory_quantity) > 0
-ORDER BY percentage_sold ASC;
+GROUP BY p.product_id, i.inventory_quantity
+ORDER BY percentage_sold ASC
 	
 /*
  * QUESTION 6
@@ -92,7 +91,16 @@ ORDER BY percentage_sold ASC;
  * of yoghurt?
  *
  */
-	
+
+-- Total
+SELECT p.product_brand, SUM(s.sale_quantity) AS total_sales
+FROM sale s JOIN product p ON s.product_id = p.product_id
+WHERE p.product_group = 'Yoghurt'
+GROUP BY p.product_brand
+ORDER BY total_sales DESC
+LIMIT 1;
+
+-- By age group
 WITH foo (brand, count, age) AS (
 SELECT product_brand, COUNT(DISTINCT(sale_id)) AS sale_num, 
   CASE 

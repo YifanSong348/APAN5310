@@ -86,9 +86,8 @@ ORDER BY percentage_sold ASC
  * QUESTION 6
  * ---------------------
  * ABC Foodmart wants their yoghurt section to appeal 
- * to a wide variety of age groups. For each age group (>18, 
- * 18-30, 30-45, 45-65, 65+), what are the most popular brands 
- * of yoghurt?
+ * to a wide variety of age groups. Which is the most popular
+ * brand of yogurt overall and by age group? 
  *
  */
 

@@ -1,0 +1,19 @@
+﻿expense_id,store_id,expense_date,expense_description,expense_type,expense_amount
+0,1001,2023-04-01 00:00:00,,Utility bills,300
+1,1001,2023-04-03 00:00:00,repair of fridge,Repairs,600
+2,1001,2023-04-04 00:00:00,,Kitchen Equipment,1000
+3,1001,2023-04-05 00:00:00,,Plumbing,200
+4,1001,2023-04-06 00:00:00,Retail software subscription fee,Software,500
+5,1001,2023-04-07 00:00:00,purchase of POS machines,POS machines,500
+6,1001,2023-04-08 00:00:00,purchase of shopping baskets,Shopping Baskets,100
+7,1001,2023-04-09 00:00:00,gas fee,Delivery Vans,3000
+8,1001,2023-04-10 00:00:00,,Rent,6000
+9,1002,2023-04-05 00:00:00,,Utility bills,400
+10,1002,2023-04-06 00:00:00,,Repairs,500
+11,1002,2023-04-07 00:00:00,,Kitchen Equipment,1200
+12,1002,2023-04-08 00:00:00,,Plumbing,400
+13,1002,2023-04-09 00:00:00,Retail software subscription fee,Software,500
+14,1002,2023-04-10 00:00:00,purchase of POS machines,POS machines,1000
+15,1002,2023-04-11 00:00:00,purchase of shopping baskets,Shopping Baskets,100
+16,1002,2023-04-12 00:00:00,gas fee,Delivery Vans,2500
+17,1002,2023-04-13 00:00:00,,Rent,7000
